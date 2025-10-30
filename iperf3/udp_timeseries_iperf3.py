@@ -189,7 +189,9 @@ def run_udp_bi(
     server: str,
     port: int,
     duration: int,
-    bandwidth_mbps: float,
+    ul_mbps: float,
+    dl_mbps: float,
+    common_bandwidth_mbps: float,
     omit: int = 0,
     blksize: int = 0,
     time_format: str = "both",
@@ -199,11 +201,11 @@ def run_udp_bi(
     Returns a combined structure with metadata, per-interval samples, and summary.
     """
     meta_up, samples_up = _run_udp_once(
-        server, port, duration, bandwidth_mbps, reverse=False,
+        server, port, duration, ul_mbps, reverse=False,
         omit=omit, blksize=blksize, time_format=time_format
     )
     meta_down, samples_down = _run_udp_once(
-        server, port, duration, bandwidth_mbps, reverse=True,
+        server, port, duration, dl_mbps, reverse=True,
         omit=omit, blksize=blksize, time_format=time_format
     )
 
@@ -215,11 +217,13 @@ def run_udp_bi(
             "port": port,
             "protocol": "udp",
             "duration_s": duration,
-            "bandwidth_target_mbps": bandwidth_mbps,
+            # Preserve legacy top-level field (schema unchanged):
+            "bandwidth_target_mbps": common_bandwidth_mbps,
             "omit_s": omit,
             "blksize": blksize if blksize > 0 else None,
             "time_format": time_format,
             "tests": {
+                # Per-test metadata already contains per-direction bandwidth_target_mbps
                 "uplink": {k: v for k, v in meta_up.items() if k not in ("reverse", "time_format")},
                 "downlink": {k: v for k, v in meta_down.items() if k not in ("reverse", "time_format")},
             }
@@ -233,7 +237,12 @@ def main():
     parser.add_argument("--server", required=True, help="iperf3 server hostname or IP")
     parser.add_argument("--port", type=int, default=5201, help="iperf3 server port (default: 5201)")
     parser.add_argument("--duration", type=int, default=10, help="Test duration in seconds (default: 10)")
-    parser.add_argument("--bandwidth-mbps", type=float, default=10.0, help="Target UDP bandwidth in Mbps (default: 10)")
+    parser.add_argument("--bandwidth-mbps", type=float, default=10.0,
+                        help="Default target UDP bandwidth in Mbps for both directions (unless overridden)")
+    parser.add_argument("--ul-mbps", type=float, default=None,
+                        help="Optional target UDP bandwidth in Mbps for uplink (overrides --bandwidth-mbps)")
+    parser.add_argument("--dl-mbps", type=float, default=None,
+                        help="Optional target UDP bandwidth in Mbps for downlink (overrides --bandwidth-mbps)")
     parser.add_argument("--omit", type=int, default=0, help="Seconds to omit at start (warm-up). Default: 0")
     parser.add_argument("--blksize", type=int, default=0, help="Datagram size (bytes); 0 to let iperf3 choose")
     parser.add_argument("--time-format", choices=["relative", "epoch", "both"], default="both",
@@ -242,11 +251,17 @@ def main():
 
     args = parser.parse_args()
 
+    # Resolve per-direction bandwidths while keeping legacy top-level field unchanged
+    ul_mbps = args.ul_mbps if args.ul_mbps is not None else args.bandwidth_mbps
+    dl_mbps = args.dl_mbps if args.dl_mbps is not None else args.bandwidth_mbps
+
     result = run_udp_bi(
         server=args.server,
         port=args.port,
         duration=args.duration,
-        bandwidth_mbps=args.bandwidth_mbps,
+        ul_mbps=ul_mbps,
+        dl_mbps=dl_mbps,
+        common_bandwidth_mbps=args.bandwidth_mbps,  # legacy top-level field
         omit=args.omit,
         blksize=args.blksize,
         time_format=args.time_format,

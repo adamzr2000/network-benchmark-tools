@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import seaborn as sns
 
-INFILE = Path("../data/test.json")
+INFILE = Path("../data/robot-5g-ul200-dl750.json")
 OUTFILE = Path("./ue_ran_performance_udp_iperf3.png")
 
 COLOR_PALETTE = ["#0000FF", "#FF0000"]

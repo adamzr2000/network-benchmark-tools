@@ -1,0 +1,1351 @@
+{
+  "metadata": {
+    "server": "10.5.15.17",
+    "port": 5201,
+    "protocol": "udp",
+    "duration_s": 60,
+    "omit_s": 0,
+    "blksize": 1200,
+    "tests": {
+      "uplink": {
+        "server": "10.5.15.17",
+        "port": 5201,
+        "protocol": "udp",
+        "duration_s": 60,
+        "bandwidth_target_mbps": 260.0,
+        "omit_s": 0,
+        "blksize": 1200,
+        "iperf3_version_client": "iperf 3.7",
+        "server_output_text_present": true,
+        "receiver_totals": {
+          "bandwidth_mbps": 249.0,
+          "jitter_ms": 0.269,
+          "lost_packets": 64291,
+          "packets": 1624974,
+          "lost_percent": 4.0
+        },
+        "direction": "uplink"
+      },
+      "downlink": {
+        "server": "10.5.15.17",
+        "port": 5201,
+        "protocol": "udp",
+        "duration_s": 60,
+        "bandwidth_target_mbps": 840.0,
+        "omit_s": 0,
+        "blksize": 1200,
+        "iperf3_version_client": "iperf 3.7",
+        "direction": "downlink"
+      }
+    },
+    "notes": {
+      "uplink_intervals_sender": true,
+      "uplink_intervals_receiver_series": "uplink_rx",
+      "uplink_summary_uses_receiver_totals_when_available": true
+    }
+  },
+  "samples": [
+    {
+      "timestamp": 1761897942.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 259790491.06605846,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897943.000127,
+      "direction": "uplink",
+      "bandwidth_bps": 260006926.9190976,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897944.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 260079083.36950055,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897945.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 259939200.0,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897946.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 259971611.51135084,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897947.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 260016000.0,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897948.000068,
+      "direction": "uplink",
+      "bandwidth_bps": 260031855.5858293,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897949.00013,
+      "direction": "uplink",
+      "bandwidth_bps": 259951885.88659036,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897950.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 260089459.09823522,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897951.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 259977600.0,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897952.000131,
+      "direction": "uplink",
+      "bandwidth_bps": 259942286.48164624,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897953.000068,
+      "direction": "uplink",
+      "bandwidth_bps": 260041983.19350693,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897954.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 259961733.19499543,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897955.000122,
+      "direction": "uplink",
+      "bandwidth_bps": 259998613.16362262,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897956.000136,
+      "direction": "uplink",
+      "bandwidth_bps": 259983573.88251492,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897957.000122,
+      "direction": "uplink",
+      "bandwidth_bps": 260010041.98445478,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897958.000128,
+      "direction": "uplink",
+      "bandwidth_bps": 259995250.3075462,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897959.00009,
+      "direction": "uplink",
+      "bandwidth_bps": 260045088.93310663,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897960.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 260040655.87008396,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897961.000127,
+      "direction": "uplink",
+      "bandwidth_bps": 259914510.6828329,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897962.00012,
+      "direction": "uplink",
+      "bandwidth_bps": 260008213.23057103,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897963.000062,
+      "direction": "uplink",
+      "bandwidth_bps": 260079083.36950055,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897964.000125,
+      "direction": "uplink",
+      "bandwidth_bps": 259922839.8053864,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897965.000134,
+      "direction": "uplink",
+      "bandwidth_bps": 259984875.55407685,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897966.000122,
+      "direction": "uplink",
+      "bandwidth_bps": 260009515.05273136,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897967.000138,
+      "direction": "uplink",
+      "bandwidth_bps": 259992646.86581135,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897968.000133,
+      "direction": "uplink",
+      "bandwidth_bps": 260007701.8040032,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897969.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 260109451.00755584,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897970.000122,
+      "direction": "uplink",
+      "bandwidth_bps": 259896612.969688,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897971.000068,
+      "direction": "uplink",
+      "bandwidth_bps": 260097245.72156808,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897972.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 259967752.07543176,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897973.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 259977600.0,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897974.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 259952412.66255745,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897975.000121,
+      "direction": "uplink",
+      "bandwidth_bps": 260008476.69352752,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897976.000116,
+      "direction": "uplink",
+      "bandwidth_bps": 259988501.70787236,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897977.000062,
+      "direction": "uplink",
+      "bandwidth_bps": 260135647.7953495,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897978.00007,
+      "direction": "uplink",
+      "bandwidth_bps": 259975523.5696698,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897979.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 259920263.37173447,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897980.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 260016000.0,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897981.000124,
+      "direction": "uplink",
+      "bandwidth_bps": 259953714.1182174,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897982.000126,
+      "direction": "uplink",
+      "bandwidth_bps": 259996273.10249296,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897983.000068,
+      "direction": "uplink",
+      "bandwidth_bps": 260031080.58556378,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897984.000069,
+      "direction": "uplink",
+      "bandwidth_bps": 260044552.00218964,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897985.000078,
+      "direction": "uplink",
+      "bandwidth_bps": 259984875.55407685,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897986.00007,
+      "direction": "uplink",
+      "bandwidth_bps": 260027676.84687957,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897987.00007,
+      "direction": "uplink",
+      "bandwidth_bps": 260025600.0,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897988.000128,
+      "direction": "uplink",
+      "bandwidth_bps": 259885712.35471764,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897989.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 260006152.0388107,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897990.00012,
+      "direction": "uplink",
+      "bandwidth_bps": 259999140.07061425,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897991.000125,
+      "direction": "uplink",
+      "bandwidth_bps": 260005098.20903245,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897992.00007,
+      "direction": "uplink",
+      "bandwidth_bps": 259943900.83635283,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897993.000078,
+      "direction": "uplink",
+      "bandwidth_bps": 260090722.6495722,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897994.000135,
+      "direction": "uplink",
+      "bandwidth_bps": 259953187.3369757,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897995.000124,
+      "direction": "uplink",
+      "bandwidth_bps": 260009267.08560055,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897996.000136,
+      "direction": "uplink",
+      "bandwidth_bps": 259993669.6402748,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897997.000126,
+      "direction": "uplink",
+      "bandwidth_bps": 260018603.7171736,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897998.000129,
+      "direction": "uplink",
+      "bandwidth_bps": 259986425.18007404,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897999.000133,
+      "direction": "uplink",
+      "bandwidth_bps": 259995746.2071215,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761898000.000134,
+      "direction": "uplink",
+      "bandwidth_bps": 260006152.0388107,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761898001.000132,
+      "direction": "uplink",
+      "bandwidth_bps": 259987726.88018763,
+      "jitter_ms": 0.0,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897942.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 236000000.0,
+      "jitter_ms": 0.028,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761897943.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.038,
+      "loss_pct": 1.4
+    },
+    {
+      "timestamp": 1761897944.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.045,
+      "loss_pct": 2.8
+    },
+    {
+      "timestamp": 1761897945.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 253000000.0,
+      "jitter_ms": 0.119,
+      "loss_pct": 3.1
+    },
+    {
+      "timestamp": 1761897946.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.125,
+      "loss_pct": 3.7
+    },
+    {
+      "timestamp": 1761897947.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.026,
+      "loss_pct": 4.6
+    },
+    {
+      "timestamp": 1761897948.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 253000000.0,
+      "jitter_ms": 0.058,
+      "loss_pct": 2.9
+    },
+    {
+      "timestamp": 1761897949.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.066,
+      "loss_pct": 3.5
+    },
+    {
+      "timestamp": 1761897950.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 257000000.0,
+      "jitter_ms": 0.033,
+      "loss_pct": 2.2
+    },
+    {
+      "timestamp": 1761897951.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 253000000.0,
+      "jitter_ms": 0.03,
+      "loss_pct": 2.7
+    },
+    {
+      "timestamp": 1761897952.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.349,
+      "loss_pct": 4.5
+    },
+    {
+      "timestamp": 1761897953.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 247000000.0,
+      "jitter_ms": 0.038,
+      "loss_pct": 5.1
+    },
+    {
+      "timestamp": 1761897954.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.086,
+      "loss_pct": 4.2
+    },
+    {
+      "timestamp": 1761897955.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.124,
+      "loss_pct": 3.6
+    },
+    {
+      "timestamp": 1761897956.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 253000000.0,
+      "jitter_ms": 0.121,
+      "loss_pct": 2.8
+    },
+    {
+      "timestamp": 1761897957.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.132,
+      "loss_pct": 4.3
+    },
+    {
+      "timestamp": 1761897958.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.084,
+      "loss_pct": 5.1
+    },
+    {
+      "timestamp": 1761897959.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.023,
+      "loss_pct": 3.0
+    },
+    {
+      "timestamp": 1761897960.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.096,
+      "loss_pct": 3.4
+    },
+    {
+      "timestamp": 1761897961.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.025,
+      "loss_pct": 3.6
+    },
+    {
+      "timestamp": 1761897962.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.082,
+      "loss_pct": 5.1
+    },
+    {
+      "timestamp": 1761897963.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.127,
+      "loss_pct": 2.5
+    },
+    {
+      "timestamp": 1761897964.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 247000000.0,
+      "jitter_ms": 0.052,
+      "loss_pct": 4.9
+    },
+    {
+      "timestamp": 1761897965.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.094,
+      "loss_pct": 3.9
+    },
+    {
+      "timestamp": 1761897966.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.14,
+      "loss_pct": 3.8
+    },
+    {
+      "timestamp": 1761897967.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.102,
+      "loss_pct": 3.8
+    },
+    {
+      "timestamp": 1761897968.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.054,
+      "loss_pct": 3.2
+    },
+    {
+      "timestamp": 1761897969.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.072,
+      "loss_pct": 4.7
+    },
+    {
+      "timestamp": 1761897970.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.021,
+      "loss_pct": 4.9
+    },
+    {
+      "timestamp": 1761897971.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.036,
+      "loss_pct": 3.8
+    },
+    {
+      "timestamp": 1761897972.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 243000000.0,
+      "jitter_ms": 0.095,
+      "loss_pct": 6.7
+    },
+    {
+      "timestamp": 1761897973.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.077,
+      "loss_pct": 4.3
+    },
+    {
+      "timestamp": 1761897974.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.427,
+      "loss_pct": 5.2
+    },
+    {
+      "timestamp": 1761897975.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.042,
+      "loss_pct": 3.4
+    },
+    {
+      "timestamp": 1761897976.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 247000000.0,
+      "jitter_ms": 0.112,
+      "loss_pct": 5.2
+    },
+    {
+      "timestamp": 1761897977.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 244000000.0,
+      "jitter_ms": 0.145,
+      "loss_pct": 5.6
+    },
+    {
+      "timestamp": 1761897978.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.14,
+      "loss_pct": 3.6
+    },
+    {
+      "timestamp": 1761897979.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 246000000.0,
+      "jitter_ms": 0.087,
+      "loss_pct": 5.0
+    },
+    {
+      "timestamp": 1761897980.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.094,
+      "loss_pct": 4.2
+    },
+    {
+      "timestamp": 1761897981.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 246000000.0,
+      "jitter_ms": 0.053,
+      "loss_pct": 4.8
+    },
+    {
+      "timestamp": 1761897982.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 244000000.0,
+      "jitter_ms": 0.101,
+      "loss_pct": 5.5
+    },
+    {
+      "timestamp": 1761897983.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 246000000.0,
+      "jitter_ms": 0.023,
+      "loss_pct": 5.9
+    },
+    {
+      "timestamp": 1761897984.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.135,
+      "loss_pct": 4.4
+    },
+    {
+      "timestamp": 1761897985.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.025,
+      "loss_pct": 3.9
+    },
+    {
+      "timestamp": 1761897986.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.035,
+      "loss_pct": 3.4
+    },
+    {
+      "timestamp": 1761897987.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 240000000.0,
+      "jitter_ms": 0.033,
+      "loss_pct": 8.3
+    },
+    {
+      "timestamp": 1761897988.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.108,
+      "loss_pct": 4.0
+    },
+    {
+      "timestamp": 1761897989.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.033,
+      "loss_pct": 3.3
+    },
+    {
+      "timestamp": 1761897990.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.144,
+      "loss_pct": 4.4
+    },
+    {
+      "timestamp": 1761897991.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 253000000.0,
+      "jitter_ms": 0.041,
+      "loss_pct": 3.4
+    },
+    {
+      "timestamp": 1761897992.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.036,
+      "loss_pct": 2.3
+    },
+    {
+      "timestamp": 1761897993.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.075,
+      "loss_pct": 4.3
+    },
+    {
+      "timestamp": 1761897994.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 249000000.0,
+      "jitter_ms": 0.272,
+      "loss_pct": 3.8
+    },
+    {
+      "timestamp": 1761897995.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.035,
+      "loss_pct": 4.2
+    },
+    {
+      "timestamp": 1761897996.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 251000000.0,
+      "jitter_ms": 0.087,
+      "loss_pct": 2.9
+    },
+    {
+      "timestamp": 1761897997.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 248000000.0,
+      "jitter_ms": 0.043,
+      "loss_pct": 4.7
+    },
+    {
+      "timestamp": 1761897998.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.137,
+      "loss_pct": 3.7
+    },
+    {
+      "timestamp": 1761897999.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 250000000.0,
+      "jitter_ms": 0.037,
+      "loss_pct": 3.1
+    },
+    {
+      "timestamp": 1761898000.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 253000000.0,
+      "jitter_ms": 0.027,
+      "loss_pct": 2.9
+    },
+    {
+      "timestamp": 1761898001.0,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 252000000.0,
+      "jitter_ms": 0.019,
+      "loss_pct": 3.9
+    },
+    {
+      "timestamp": 1761898001.12,
+      "direction": "uplink_rx",
+      "bandwidth_bps": 222000000.0,
+      "jitter_ms": 0.269,
+      "loss_pct": 0.0
+    },
+    {
+      "timestamp": 1761898002.3880968,
+      "direction": "downlink",
+      "bandwidth_bps": 796378465.9145756,
+      "jitter_ms": 0.011141223219389313,
+      "loss_pct": 3.463163161998301
+    },
+    {
+      "timestamp": 1761898003.3881397,
+      "direction": "downlink",
+      "bandwidth_bps": 809801950.5346128,
+      "jitter_ms": 0.01334861359994937,
+      "loss_pct": 0.0011854099740395215
+    },
+    {
+      "timestamp": 1761898004.388099,
+      "direction": "downlink",
+      "bandwidth_bps": 806970692.2506015,
+      "jitter_ms": 0.01887329613773609,
+      "loss_pct": 0.005948061526748432
+    },
+    {
+      "timestamp": 1761898005.3881028,
+      "direction": "downlink",
+      "bandwidth_bps": 809766317.9233063,
+      "jitter_ms": 0.01086054917619737,
+      "loss_pct": 0.005927260657214661
+    },
+    {
+      "timestamp": 1761898006.388099,
+      "direction": "downlink",
+      "bandwidth_bps": 811376040.2393041,
+      "jitter_ms": 0.012044178807349875,
+      "loss_pct": 0.00473249568159769
+    },
+    {
+      "timestamp": 1761898007.3880959,
+      "direction": "downlink",
+      "bandwidth_bps": 805836001.578431,
+      "jitter_ms": 0.01082522955098824,
+      "loss_pct": 0.005956209944488124
+    },
+    {
+      "timestamp": 1761898008.3881137,
+      "direction": "downlink",
+      "bandwidth_bps": 809726224.4399202,
+      "jitter_ms": 0.012854845399452431,
+      "loss_pct": 0.007112881428266591
+    },
+    {
+      "timestamp": 1761898009.3881478,
+      "direction": "downlink",
+      "bandwidth_bps": 807927750.9394386,
+      "jitter_ms": 0.01422500517298032,
+      "loss_pct": 0.04394351476858395
+    },
+    {
+      "timestamp": 1761898010.3881528,
+      "direction": "downlink",
+      "bandwidth_bps": 808584751.5858213,
+      "jitter_ms": 0.014523118499392836,
+      "loss_pct": 0.1907831589425162
+    },
+    {
+      "timestamp": 1761898011.3881037,
+      "direction": "downlink",
+      "bandwidth_bps": 808330804.1823052,
+      "jitter_ms": 0.015853581071477614,
+      "loss_pct": 3.794647958134327
+    },
+    {
+      "timestamp": 1761898012.388151,
+      "direction": "downlink",
+      "bandwidth_bps": 808800411.890139,
+      "jitter_ms": 0.015446155792698814,
+      "loss_pct": 3.713015553752443
+    },
+    {
+      "timestamp": 1761898013.3880978,
+      "direction": "downlink",
+      "bandwidth_bps": 807508388.6818372,
+      "jitter_ms": 0.01057300156578584,
+      "loss_pct": 3.709173335165024
+    },
+    {
+      "timestamp": 1761898014.3881178,
+      "direction": "downlink",
+      "bandwidth_bps": 809330991.3982207,
+      "jitter_ms": 0.015543046816758468,
+      "loss_pct": 3.646940501497177
+    },
+    {
+      "timestamp": 1761898015.3881547,
+      "direction": "downlink",
+      "bandwidth_bps": 807176570.8868772,
+      "jitter_ms": 0.008961284653642302,
+      "loss_pct": 3.619816143600559
+    },
+    {
+      "timestamp": 1761898016.3880968,
+      "direction": "downlink",
+      "bandwidth_bps": 809998976.1493083,
+      "jitter_ms": 0.009499633897403466,
+      "loss_pct": 3.7728962795684207
+    },
+    {
+      "timestamp": 1761898017.3880968,
+      "direction": "downlink",
+      "bandwidth_bps": 807945600.0,
+      "jitter_ms": 0.037225367327341725,
+      "loss_pct": 3.590125436737499
+    },
+    {
+      "timestamp": 1761898018.3881397,
+      "direction": "downlink",
+      "bandwidth_bps": 810905903.0265101,
+      "jitter_ms": 0.01524489759299986,
+      "loss_pct": 3.70703904246224
+    },
+    {
+      "timestamp": 1761898019.388105,
+      "direction": "downlink",
+      "bandwidth_bps": 809932337.8530931,
+      "jitter_ms": 0.012487976600922096,
+      "loss_pct": 3.5663256558267133
+    },
+    {
+      "timestamp": 1761898020.388136,
+      "direction": "downlink",
+      "bandwidth_bps": 810512478.6396449,
+      "jitter_ms": 0.016430084202870225,
+      "loss_pct": 3.3395155012135365
+    },
+    {
+      "timestamp": 1761898021.3881187,
+      "direction": "downlink",
+      "bandwidth_bps": 805933690.6565331,
+      "jitter_ms": 0.013572298214407898,
+      "loss_pct": 4.23772315063024
+    },
+    {
+      "timestamp": 1761898022.388126,
+      "direction": "downlink",
+      "bandwidth_bps": 807056723.6891391,
+      "jitter_ms": 0.014417755218001555,
+      "loss_pct": 4.155550995280115
+    },
+    {
+      "timestamp": 1761898023.388157,
+      "direction": "downlink",
+      "bandwidth_bps": 803802286.6181229,
+      "jitter_ms": 0.025168482918526105,
+      "loss_pct": 4.251572327044025
+    },
+    {
+      "timestamp": 1761898024.388156,
+      "direction": "downlink",
+      "bandwidth_bps": 810586421.3501669,
+      "jitter_ms": 0.010105799001062166,
+      "loss_pct": 3.586558114573461
+    },
+    {
+      "timestamp": 1761898025.3881009,
+      "direction": "downlink",
+      "bandwidth_bps": 805273102.1698774,
+      "jitter_ms": 0.009972228713099319,
+      "loss_pct": 3.2861359653168525
+    },
+    {
+      "timestamp": 1761898026.388131,
+      "direction": "downlink",
+      "bandwidth_bps": 805694196.349349,
+      "jitter_ms": 0.02145301227535442,
+      "loss_pct": 4.285697994001391
+    },
+    {
+      "timestamp": 1761898027.3881018,
+      "direction": "downlink",
+      "bandwidth_bps": 808631472.519345,
+      "jitter_ms": 0.012901352864002184,
+      "loss_pct": 4.2089820427380555
+    },
+    {
+      "timestamp": 1761898028.388116,
+      "direction": "downlink",
+      "bandwidth_bps": 807271940.5852022,
+      "jitter_ms": 0.013624982756639398,
+      "loss_pct": 4.176305024100642
+    },
+    {
+      "timestamp": 1761898029.388156,
+      "direction": "downlink",
+      "bandwidth_bps": 807951638.0455037,
+      "jitter_ms": 0.015564016052883796,
+      "loss_pct": 3.5269709543568464
+    },
+    {
+      "timestamp": 1761898030.388099,
+      "direction": "downlink",
+      "bandwidth_bps": 810987011.6946685,
+      "jitter_ms": 0.028703395785689607,
+      "loss_pct": 3.53329450592118
+    },
+    {
+      "timestamp": 1761898031.388095,
+      "direction": "downlink",
+      "bandwidth_bps": 808841630.1181089,
+      "jitter_ms": 0.010107263224929238,
+      "loss_pct": 3.581891421770576
+    },
+    {
+      "timestamp": 1761898032.3881528,
+      "direction": "downlink",
+      "bandwidth_bps": 806209195.586413,
+      "jitter_ms": 0.011025747421349505,
+      "loss_pct": 3.7277760583238764
+    },
+    {
+      "timestamp": 1761898033.3881547,
+      "direction": "downlink",
+      "bandwidth_bps": 814567949.2308692,
+      "jitter_ms": 0.010058922427273617,
+      "loss_pct": 3.6046987185313095
+    },
+    {
+      "timestamp": 1761898034.3881278,
+      "direction": "downlink",
+      "bandwidth_bps": 811893921.8699102,
+      "jitter_ms": 0.01355013156769154,
+      "loss_pct": 3.151554018460411
+    },
+    {
+      "timestamp": 1761898035.3881178,
+      "direction": "downlink",
+      "bandwidth_bps": 810574516.7530307,
+      "jitter_ms": 0.013433623880373165,
+      "loss_pct": 3.5712246319708547
+    },
+    {
+      "timestamp": 1761898036.3881528,
+      "direction": "downlink",
+      "bandwidth_bps": 811219568.7569124,
+      "jitter_ms": 0.009708875310369486,
+      "loss_pct": 3.2536893081616998
+    },
+    {
+      "timestamp": 1761898037.38813,
+      "direction": "downlink",
+      "bandwidth_bps": 809106615.4337858,
+      "jitter_ms": 0.015459507229744618,
+      "loss_pct": 3.764687075373671
+    },
+    {
+      "timestamp": 1761898038.3881547,
+      "direction": "downlink",
+      "bandwidth_bps": 807090195.343754,
+      "jitter_ms": 0.018141781045160357,
+      "loss_pct": 3.7603452420471846
+    },
+    {
+      "timestamp": 1761898039.388131,
+      "direction": "downlink",
+      "bandwidth_bps": 808733026.3106349,
+      "jitter_ms": 0.01367937633772654,
+      "loss_pct": 3.7399730328861667
+    },
+    {
+      "timestamp": 1761898040.3881238,
+      "direction": "downlink",
+      "bandwidth_bps": 809112842.5453769,
+      "jitter_ms": 0.01692271436070033,
+      "loss_pct": 3.6413733179370507
+    },
+    {
+      "timestamp": 1761898041.3881547,
+      "direction": "downlink",
+      "bandwidth_bps": 809629306.013064,
+      "jitter_ms": 0.013129695541887466,
+      "loss_pct": 3.8849888316542827
+    },
+    {
+      "timestamp": 1761898042.3881438,
+      "direction": "downlink",
+      "bandwidth_bps": 810796140.5349492,
+      "jitter_ms": 0.01285447639645884,
+      "loss_pct": 3.3904896992713422
+    },
+    {
+      "timestamp": 1761898043.3881419,
+      "direction": "downlink",
+      "bandwidth_bps": 807544036.5347649,
+      "jitter_ms": 0.01616800549154181,
+      "loss_pct": 3.7980329368709973
+    },
+    {
+      "timestamp": 1761898044.3881187,
+      "direction": "downlink",
+      "bandwidth_bps": 809999435.9752587,
+      "jitter_ms": 0.012626816070987222,
+      "loss_pct": 3.6331863764077026
+    },
+    {
+      "timestamp": 1761898045.3881369,
+      "direction": "downlink",
+      "bandwidth_bps": 810638208.0236659,
+      "jitter_ms": 0.015108745860875647,
+      "loss_pct": 3.269299059532401
+    },
+    {
+      "timestamp": 1761898046.388099,
+      "direction": "downlink",
+      "bandwidth_bps": 812363692.3742613,
+      "jitter_ms": 0.014235910043242235,
+      "loss_pct": 3.523053769325489
+    },
+    {
+      "timestamp": 1761898047.3881269,
+      "direction": "downlink",
+      "bandwidth_bps": 807126189.0192008,
+      "jitter_ms": 0.014653791549303657,
+      "loss_pct": 3.794310822253244
+    },
+    {
+      "timestamp": 1761898048.3881059,
+      "direction": "downlink",
+      "bandwidth_bps": 809680987.7831757,
+      "jitter_ms": 0.012726822187815016,
+      "loss_pct": 3.7236592771854524
+    },
+    {
+      "timestamp": 1761898049.3881578,
+      "direction": "downlink",
+      "bandwidth_bps": 809113146.1417534,
+      "jitter_ms": 0.012960087330812959,
+      "loss_pct": 3.390452174909737
+    },
+    {
+      "timestamp": 1761898050.3881447,
+      "direction": "downlink",
+      "bandwidth_bps": 809424917.5156604,
+      "jitter_ms": 0.01278174210473373,
+      "loss_pct": 3.8817131978248725
+    },
+    {
+      "timestamp": 1761898051.3881447,
+      "direction": "downlink",
+      "bandwidth_bps": 807715200.0,
+      "jitter_ms": 0.013605961466135385,
+      "loss_pct": 3.689331501831502
+    },
+    {
+      "timestamp": 1761898052.388156,
+      "direction": "downlink",
+      "bandwidth_bps": 807351145.5744036,
+      "jitter_ms": 0.126442976126839,
+      "loss_pct": 3.7658340103672003
+    },
+    {
+      "timestamp": 1761898053.3880959,
+      "direction": "downlink",
+      "bandwidth_bps": 810087022.9438844,
+      "jitter_ms": 0.011816962646063746,
+      "loss_pct": 4.263816558312627
+    },
+    {
+      "timestamp": 1761898054.388156,
+      "direction": "downlink",
+      "bandwidth_bps": 806015669.4686719,
+      "jitter_ms": 0.016860254151903953,
+      "loss_pct": 3.685562871366629
+    },
+    {
+      "timestamp": 1761898055.3881128,
+      "direction": "downlink",
+      "bandwidth_bps": 808786757.5695639,
+      "jitter_ms": 0.014421273243495007,
+      "loss_pct": 3.572327907881785
+    },
+    {
+      "timestamp": 1761898056.388095,
+      "direction": "downlink",
+      "bandwidth_bps": 809160165.3706754,
+      "jitter_ms": 0.009033226593928629,
+      "loss_pct": 3.6015325670498086
+    },
+    {
+      "timestamp": 1761898057.3881278,
+      "direction": "downlink",
+      "bandwidth_bps": 808907689.0808731,
+      "jitter_ms": 0.011233321265186905,
+      "loss_pct": 3.8433448968413364
+    },
+    {
+      "timestamp": 1761898058.388131,
+      "direction": "downlink",
+      "bandwidth_bps": 809517587.4495881,
+      "jitter_ms": 0.012760270857492097,
+      "loss_pct": 3.7001084908353796
+    },
+    {
+      "timestamp": 1761898059.3881447,
+      "direction": "downlink",
+      "bandwidth_bps": 809172714.0741888,
+      "jitter_ms": 0.012385139312817487,
+      "loss_pct": 3.511985164495524
+    },
+    {
+      "timestamp": 1761898060.3881288,
+      "direction": "downlink",
+      "bandwidth_bps": 811424161.725911,
+      "jitter_ms": 0.015612432538652351,
+      "loss_pct": 3.4971741736598734
+    },
+    {
+      "timestamp": 1761898061.3881638,
+      "direction": "downlink",
+      "bandwidth_bps": 806419736.979166,
+      "jitter_ms": 0.01356058612339349,
+      "loss_pct": 3.8118029633361576
+    }
+  ],
+  "summary": {
+    "uplink": {
+      "num_samples": 60,
+      "bandwidth_mbps": {
+        "avg": 249.0,
+        "min": 259.79049106605845,
+        "max": 260.1356477953495,
+        "std": 0.056675609274139345
+      },
+      "avg_jitter_ms": 0.269,
+      "avg_loss_pct": 4.0
+    },
+    "uplink_rx": {
+      "num_samples": 61,
+      "bandwidth_mbps": {
+        "avg": 248.7704918032787,
+        "min": 222.0,
+        "max": 257.0,
+        "std": 4.747366630255553
+      },
+      "avg_jitter_ms": 0.08873770491803279,
+      "avg_loss_pct": 3.8918032786885246
+    },
+    "downlink": {
+      "num_samples": 60,
+      "bandwidth_mbps": {
+        "avg": 808.6370418982222,
+        "min": 796.3784659145756,
+        "max": 814.5679492308692,
+        "std": 2.5020434805348635
+      },
+      "avg_jitter_ms": 0.01614184754323146,
+      "avg_loss_pct": 3.2077709785586443
+    }
+  }
+}

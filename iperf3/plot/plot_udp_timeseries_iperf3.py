@@ -10,7 +10,10 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import seaborn as sns
 
-INFILE = Path("../data/robot-5g-ul200-dl750.json")
+INFILE = "test.json"
+DATA_PATH = "../data"
+INFILE = Path(f"{DATA_PATH}/{INFILE}")
+
 OUTFILE = Path("./ue_ran_performance_udp_iperf3.png")
 
 COLOR_PALETTE = ["#0000FF", "#FF0000"]
@@ -50,7 +53,7 @@ def main():
     summary = data.get("summary", {})
 
     # Split by direction
-    ul = [s for s in samples if s.get("direction") == "uplink"]
+    ul = [s for s in samples if s.get("direction") == "uplink_rx"]
     dl = [s for s in samples if s.get("direction") == "downlink"]
 
     # X axis (relative seconds)
@@ -66,7 +69,7 @@ def main():
     y_dl_loss_pct = [float(s.get("loss_pct", 0.0)) for s in dl]
 
     # Pull stats from summary if present; else compute minimal ones
-    uplink_stats = summary.get("uplink", {}).get("bandwidth_mbps", {})
+    uplink_stats = summary.get("uplink_rx", {}).get("bandwidth_mbps", {})
     downlink_stats = summary.get("downlink", {}).get("bandwidth_mbps", {})
     dwn_avg_jitter = summary.get("downlink", {}).get("avg_jitter_ms", None)
     dwn_avg_loss = summary.get("downlink", {}).get("avg_loss_pct", None)
@@ -105,11 +108,11 @@ def main():
     # Right axis: jitter and loss (use DL color with different linestyles)
     ax_right = ax_left.twinx()
     ln_jit, = ax_right.plot(x_dl, y_dl_jitter_ms, linestyle="--", label="Jitter", linewidth=LINEWIDTH, color=COLOR_PALETTE[0])
-    ln_loss, = ax_right.plot(x_dl, y_dl_loss_pct, linestyle=":", label="Loss", linewidth=LINEWIDTH, color=COLOR_PALETTE[1])
-    ax_right.set_ylabel("Jitter (ms) / Loss (%)")
+    ln_loss, = ax_right.plot(x_dl, y_dl_loss_pct, linestyle=":", label="Packet Loss", linewidth=LINEWIDTH, color=COLOR_PALETTE[1])
+    ax_right.set_ylabel("Jitter (ms) / Packet Loss (%)")
 
     # Title
-    ax_left.set_title("UE-side RAN performance: Uplink/Downlink Throughput, Jitter and Loss")
+    ax_left.set_title("UE-side RAN performance: Uplink/Downlink Throughput, Jitter and Packet Loss")
 
     # Spines styling
     for ax in (ax_left, ax_right):
@@ -143,7 +146,7 @@ def main():
     )
 
     jit_txt = f"Jitter avg = {dwn_avg_jitter:.3f} ms"
-    loss_txt = f"Loss avg = {dwn_avg_loss:.3f} %"
+    loss_txt = f"Packet Loss avg = {dwn_avg_loss:.3f} %"
 
     txt_ul = Line2D([], [], linestyle="", label=ul_txt, color="black")
     txt_dl_bw = Line2D([], [], linestyle="", label=dl_txt, color="black")

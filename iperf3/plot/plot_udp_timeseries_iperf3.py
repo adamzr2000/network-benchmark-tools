@@ -10,7 +10,11 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import seaborn as sns
 
-INFILE = "test.json"
+# INFILE = "test.json"
+# INFILE = "robot_5g_ul260M_dl820M_bs1200.json"
+INFILE = "robot_5g_ul280M_dl820M_bs1200.json"
+# INFILE = "robot_5g_ul260M_dl840M_bs1200.json"
+
 DATA_PATH = "../data"
 INFILE = Path(f"{DATA_PATH}/{INFILE}")
 
@@ -18,7 +22,7 @@ OUTFILE = Path("./ue_ran_performance_udp_iperf3.png")
 
 COLOR_PALETTE = ["#0000FF", "#FF0000"]
 
-LINEWIDTH = 1.5
+LINEWIDTH = 2
 
 def _get_rel_time_s(sample, t0_epoch=None):
     """Return relative time (seconds) from a sample supporting different formats."""
@@ -125,16 +129,17 @@ def main():
     # === Major grids only ===
     ax_left.set_axisbelow(True)
     ax_right.set_axisbelow(True)
-    ax_left.grid(True, which="major", axis="both", linestyle="--", alpha=0.5)
-    ax_right.yaxis.grid(True, which="major", linestyle="-.", alpha=0.5)
+    ax_left.grid(True, which="major", axis="both", linestyle="--", alpha=0.6)
+    ax_right.yaxis.grid(True, which="major", linestyle="-.", alpha=0.6)
 
     # Legends: series legend
     series_handles = [ln_ul, ln_dl, ln_jit, ln_loss]
     series_labels = [h.get_label() for h in series_handles]
-    leg1 = ax_left.legend(series_handles, series_labels, loc="upper left", frameon=True)
-    frame_leg1 = leg1.get_frame()
-    frame_leg1.set_edgecolor("black")
-    frame_leg1.set_linewidth(1.5)
+    leg1 = ax_left.legend(
+        series_handles, series_labels,
+        loc="upper left", bbox_to_anchor=(0.0, 0.88),
+        frameon=True, fancybox=True,
+    )
 
     # Stats legend (text-only entries)
     ul_txt = (
@@ -156,20 +161,19 @@ def main():
     leg2 = ax_left.legend(
         [txt_ul, txt_dl_bw, txt_dl_jit, txt_dl_loss],
         [ul_txt, dl_txt, jit_txt, loss_txt],
-        loc="upper right",
-        frameon=True,
-        handlelength=0,     # no space for (nonexistent) handles
-        handletextpad=0.2,  # tighten text spacing
-        borderpad=0.4,      # tighten frame padding
-        labelspacing=0.3    # tighter line spacing
+        loc="upper right", bbox_to_anchor=(0.88, 0.88),
+        frameon=True, fancybox=True,
+        handlelength=0, handletextpad=0.2, borderpad=0.4, labelspacing=0.5
     )
 
-    frame_leg2 = leg2.get_frame()
-    frame_leg2.set_edgecolor("black")
-    frame_leg2.set_linewidth(1.5)
+    # put these after each legend is created
+    for leg in (leg1, leg2):
+        leg.set_frame_on(True)
+        leg.set_zorder(10)
+        fr = leg.get_frame()
+        fr.set_alpha(1)
 
     ax_left.add_artist(leg1)
-
 
     # ax_left.margins(y=0.1)
     # ax_right.margins(y=0.1)
@@ -177,10 +181,10 @@ def main():
     sns.despine(ax=ax_left)
     fig.tight_layout()
 
+    plt.show()
 
     fig.savefig(OUTFILE, dpi=300)
     print(f"Saved figure to {OUTFILE.resolve()}")
-    plt.show()
 
 
 if __name__ == "__main__":

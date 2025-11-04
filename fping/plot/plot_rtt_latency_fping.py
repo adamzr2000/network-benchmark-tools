@@ -11,17 +11,21 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import seaborn as sns
 
-INFILE = Path("../data/test.csv")
+
+# INFILE = Path("../data/test.csv")
+INFILE = Path("../data/test1/robot_5g_c10000_p20.csv")
 OUTFILE = Path("./cdf_rtt_latency_fping.png")
 
 # Style per request
 sns.set_theme(context="paper", style="ticks", font_scale=1.6)
 
+COLOR = "#0000FF"
+
+# ✅ (4) Improved ECDF using unique values for efficiency
 def _ecdf(values):
-    # type: (np.ndarray) -> tuple
-    v = np.sort(values)
-    n = v.size
-    y = np.arange(1, n + 1, dtype=float) / n
+    v, counts = np.unique(np.sort(values), return_counts=True)
+    cum = np.cumsum(counts)
+    y = cum / cum[-1]
     return v, y
 
 def main():
@@ -54,33 +58,29 @@ def main():
 
     # Plot
     fig, ax = plt.subplots(figsize=(7, 4.5))
-    ax.step(x, y, where="post", linewidth=2)
+    ax.step(x, y, where="post", linewidth=2, color=COLOR)
 
     for val, label in [(p50, "P50"), (p90, "P90"), (p95, "P95"), (p99, "P99")]:
-        ax.axvline(val, linestyle="--", linewidth=1)
-        ax.text(val, 0.02, label, rotation=90, va="bottom", ha="right")
+        ax.axvline(val, linestyle="--", linewidth=1, color=COLOR)
+        ax.text(val, 0.02, label, rotation=90, va="bottom", ha="right", color=COLOR)
 
     ax.set_xlabel("Ping RTT (ms)")
     ax.set_ylabel("CDF")
-    # Add a bit of headroom at the top
     ax.set_ylim(0.0, 1.03)
-    ax.set_xlim(left=max(0.0, rtt_min * 0.95), right=rtt_max * 1.05)
+
+    # ✅ (5) Log x-axis if RTT range is large
+    if rtt_min > 0 and (rtt_max / rtt_min) > 50:
+        ax.set_xscale("log")
+        ax.set_xlabel("Ping RTT (ms, log scale)")
+        # avoid negative x-limit with log scale
+        ax.set_xlim(left=rtt_min * 0.95, right=rtt_max * 1.05)
+    else:
+        ax.set_xlim(left=max(0.0, rtt_min * 0.95), right=rtt_max * 1.05)
+
     ax.set_title("CDF of Ping RTT")
 
-    # Stats legend
-    # stats_text = (
-    #     f"n={n}\n"
-    #     f"min={rtt_min:.2f} avg={rtt_mean:.2f} max={rtt_max:.2f} std={rtt_std:.2f} ms\n"
-    #     f"P50={p50:.2f}  P90={p90:.2f}  P95={p95:.2f}  P99={p99:.2f} ms"
-    # )
-
-    # stats_text = (
-    #     f"n={n}\n"
-    #     f"P50={p50:.2f} ms\nP90={p90:.2f} ms\nP95={p95:.2f} ms\nP99={p99:.2f} ms"
-    # )
-
     stats_text = (
-        f"n={n}\n"
+        f"n={n} samples\n"
         f"Min={rtt_min:.2f} ms\nAvg={rtt_mean:.2f} ms\nMax={rtt_max:.2f} ms\nStd={rtt_std:.2f} ms\n"
     )
 
@@ -94,22 +94,17 @@ def main():
         borderpad=0.8,
         handlelength=0,
         handletextpad=0.0,
+        fontsize=12
     )
     ax.grid(True, which="major", axis="both", linestyle="--", alpha=0.8)
 
-
-    # Spines: dark + slightly thicker
     for side in ("top", "right", "bottom", "left"):
         ax.spines[side].set_color("black")
         ax.spines[side].set_linewidth(2)
 
-    # ax.spines["top"].set_visible(False)
-    # ax.spines["right"].set_visible(False)
-                                
     fig.tight_layout()
     fig.savefig(OUTFILE, dpi=300)
     print(f"[ok] Saved CDF plot → {OUTFILE}")
-    # Optional interactive view:
     plt.show()
 
 if __name__ == "__main__":

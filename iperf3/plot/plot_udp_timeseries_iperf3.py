@@ -15,7 +15,7 @@ import seaborn as sns
 INFILE = "robot_5g_ul280M_dl820M_bs1200.json"
 # INFILE = "robot_5g_ul260M_dl840M_bs1200.json"
 
-DATA_PATH = "../data"
+DATA_PATH = "../data/test1/"
 INFILE = Path(f"{DATA_PATH}/{INFILE}")
 
 OUTFILE = Path("./ue_ran_performance_udp_iperf3.png")

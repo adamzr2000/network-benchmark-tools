@@ -13,7 +13,7 @@ import seaborn as sns
 
 
 # INFILE = Path("../data/test.csv")
-INFILE = Path("../data/test1/robot_5g_c10000_p20.csv")
+INFILE = Path("../data/test1/robot_5g_c1000_p100.csv")
 OUTFILE = Path("./cdf_rtt_latency_fping.png")
 
 # Style per request
